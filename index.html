@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>QuizNow App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <section class="screen-1">
+                <header>
+                    <h1 class="app-name">QuizNow</h1>
+                    <p>Test your knowledge across different fields</p>
+                </header>
+                <h2 class="choose-category">CHOOSE A CATEGORY</h2>
+                <div class="categories">
+                    <div class="category selected" data-category="science">
+                        <span>🔬</span>
+                        <p>Science</p>
+                    </div>
+                    <div class="category" data-category="technology">
+                        <span>💻</span>
+                        <p>Technology</p>
+                    </div>
+                    <div class="category" data-category="history">
+                        <span>🏛️</span>
+                        <p>History</p>
+                    </div>
+                    <div class="category" data-category="music">
+                        <span>🎵</span>
+                        <p>Music</p>
+                    </div>
+                    <div class="category" data-category="sports">
+                        <span>⚽</span>
+                        <p>Sports</p>
+                    </div>
+                    <div class="category" data-category="art">
+                        <span>🎨</span>
+                        <p>Art</p>
+                    </div>
+                    <div class="category" data-category="politics">
+                        <span>🌍</span>
+                        <p>Politics</p>
+                    </div>
+                    <div class="category" data-category="psychology">
+                        <span>🧠</span>
+                        <p>Psychology</p>
+                    </div>
+                    <div class="category" data-category="food">
+                        <span>🍕</span>
+                        <p>Food</p>
+                    </div>
+                </div>
+                <button id="start-btn">Start Quiz →</button>
+            </section>
+            <section class="screen-2">
+                <div class="overview">
+                    <div class="question-overview">
+                        <p>QUESTION</p>
+                        <h2 id="question-number">4/10</h2>
+                    </div>
+                    <div class="time-overview">
+                        <p>TIME LEFT</p>
+                        <h2 id="timer">0:24</h2>
+                    </div>
+                    <div class="score-overview">
+                        <p>SCORE</p>
+                        <h2 id="score-display">3/10</h2>
+                    </div>
+                </div>
+                <p class="category-display" id="category-display">Science</p>
+                <div class="question-section">
+                    <p class="question-text" id="question-text">What is the chemical symbol for Gold?</p>
+                    <div class="option" data-answer="Go">
+                        <p class="option-letter">A</p>
+                        <p class="option-text">Go</p>
+                    </div>
+
+                    <div class="option" data-answer="Gd">
+                        <p class="option-letter">B</p>
+                        <p class="option-text">Gd</p>
+                    </div>
+
+                    <div class="option" data-answer="Au">
+                        <p class="option-letter">C</p>
+                        <p class="option-text">Au</p>
+                    </div>
+
+                    <div class="option" data-answer="Ag">
+                        <p class="option-letter">D</p>
+                        <p class="option-text">Ag</p>
+                    </div>
+                </div>
+            </section>
+            <section class="screen-3 hidden">
+                <div class="complete-first-section">
+                    <span>✅</span>
+                    <p>Quiz Complete</p>
+                    <p class="category-display-final" id="category">Science</p>
+                </div>
+
+                <div class="complete-result-section">
+                    <p>YOUR SCORE</p>
+                    <h1 id="final-score">7</h1>
+                    <p>out of 10 questions</p>
+                </div>
+
+                <div class="complete-message-section">
+                    <p id="performance-msg">Great effort! You clearly know your stuff - just a few gaps to fill. Review the ones you missed and try again!</p>
+                </div>
+
+                <div class="score-review">
+                    <div class="correct">
+                        <p>CORRECT</p>
+                        <h2 id="correct-answers">7</h2>
+                    </div>
+                    <div class="wrong">
+                        <p>WRONG</p>
+                        <h2 id="wrong-answers">3</h2>
+                    </div>
+                </div>
+                <button id="play-again-btn">Play Again →</button>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
