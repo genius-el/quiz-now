@@ -102,7 +102,6 @@ startBtn.addEventListener('click', async function () {
         // Questions Array gets populated
         let questionsObject = await getQuestions(url); 
         questionsArray = questionsObject.results;
-        console.log(questionsArray);
 
         displayQuestion();
 
@@ -137,7 +136,8 @@ function displayQuestion() {
 
     // Display each answer in the four option divs
     for (let i = 0; i < optionsPool.length; i++) {
-        optionTexts[i].textContent = optionsPool[i];
+        // Decode and populate the option texts with the decoded text from the options pool
+        optionTexts[i].textContent = decodeHTML(optionsPool[i]);
     }
 
     // Update question number display
