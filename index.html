@@ -16,7 +16,7 @@
                 </header>
                 <h2 class="choose-category">CHOOSE A CATEGORY</h2>
                 <div class="categories">
-                    <div class="category selected" data-category="science">
+                    <div class="category" data-category="science">
                         <span>🔬</span>
                         <p>Science</p>
                     </div>
@@ -44,18 +44,18 @@
                         <span>🌍</span>
                         <p>Politics</p>
                     </div>
-                    <div class="category" data-category="psychology">
-                        <span>🧠</span>
-                        <p>Psychology</p>
+                    <div class="category" data-category="general-knowledge">
+                        <span>🧩</span>
+                        <p>General Knowledge</p>
                     </div>
-                    <div class="category" data-category="food">
-                        <span>🍕</span>
-                        <p>Food</p>
+                    <div class="category" data-category="film">
+                        <span>🎬</span>
+                        <p>Film</p>
                     </div>
                 </div>
                 <button id="start-btn">Start Quiz →</button>
             </section>
-            <section class="screen-2">
+            <section class="screen-2 hidden">
                 <div class="overview">
                     <div class="question-overview">
                         <p>QUESTION</p>
@@ -63,11 +63,11 @@
                     </div>
                     <div class="time-overview">
                         <p>TIME LEFT</p>
-                        <h2 id="timer">0:24</h2>
+                        <h2 id="timer">30s</h2>
                     </div>
                     <div class="score-overview">
                         <p>SCORE</p>
-                        <h2 id="score-display">3/10</h2>
+                        <h2 id="score-display">0/10</h2>
                     </div>
                 </div>
                 <p class="category-display" id="category-display">Science</p>
@@ -92,13 +92,14 @@
                         <p class="option-letter">D</p>
                         <p class="option-text">Ag</p>
                     </div>
+                    <button id="check-btn">Check →</button>
                 </div>
             </section>
-            <section class="screen-3">
+            <section class="screen-3 hidden">
                 <div class="complete-first-section">
                     <div class="complete-mark">✔</div>
                     <p class="complete-notice">Quiz Complete</p>
-                    <p class="category-display" id="category-display">Science</p>
+                    <p class="category-display" id="result-category">Science</p>
                 </div>
 
                 <div class="complete-result-section">
@@ -108,7 +109,7 @@
                 </div>
 
                 <div class="complete-message-section">
-                    <p id="performance-msg">Great effort! You clearly know your stuff - just a few gaps to fill. Review the ones you missed and try again!
+                    <p id="performance-message">Great effort! You clearly know your stuff - just a few gaps to fill. Review the ones you missed and try again!
                     </p>
                 </div>
 

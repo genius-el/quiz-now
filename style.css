@@ -198,14 +198,23 @@ button#start-btn:hover {
     cursor: pointer;
 }
 
-.option.correct {
-    border-color: var(--success);
-    background: #d3f9d8;
+.option.selected {
+    border-color: var(--primary-accent);
+    background: var(--tertiary-accent);
 }
 
-.option.wrong {
+.question-section .option.correct {
+    border-color: var(--success);
+    background: #d3f9d8;
+    display: flex;
+    align-items: center;
+}
+
+.question-section .option.wrong {
     border-color: var(--error);
     background: #ffe3e3;
+    display: flex;
+    align-items: center;
 }
 
 .option-letter {
@@ -222,13 +231,31 @@ button#start-btn:hover {
     flex-shrink: 0;
 }
 
+button#check-btn {
+    background: var(--primary-accent);
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    text-align: center;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    margin: 25px auto;
+    cursor: pointer;
+}
+
+button#check-btn:hover {
+    background: var(--secondary-accent);
+}
+
 .screen-3 {
     min-height: 500px;
     min-width: 500px;
     border: 1px solid var(--card-bg);
     border-radius: 5px;
     padding: 10px 15px;
-    margin: 20px auto;
+    margin: 0 auto;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -263,7 +290,8 @@ button#start-btn:hover {
     align-items: center;
     background: var(--primary-accent);
     border-radius: 5px;
-    min-height: 150px;
+    min-height: 130px;
+    padding: 5px;
 }
 
 .complete-result-section p {
@@ -295,7 +323,7 @@ button#start-btn:hover {
     margin-top: 20px;
 }
 
-.correct, .wrong {
+.score-review .correct, .score-review .wrong {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,7 +337,7 @@ button#play-again-btn {
     color: white;
     background: var(--primary-accent);
     min-width: 100%;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 8px;
     border: 1px solid var(--card-bg);
     border-radius: 5px;
